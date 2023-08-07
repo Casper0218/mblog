@@ -25,3 +25,12 @@ def index(request):
     now = datetime.now()
     number = 1 
     return render(request,'index.html',locals())
+
+from django.shortcuts import redirect
+def showpost(request, slug):
+    try:
+        post = Post.objects.get(slug = slug)
+        if post != None :
+            return render(request, 'post.html', locals())
+    except:
+        return redirect('/')

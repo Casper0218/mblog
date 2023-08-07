@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainsite.views import homepage, index
+from mainsite.views import homepage, showpost,index
 
 #path("",顯示路徑 def ...)),
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     #path("",homepage) 為了套用index這個function 所以先#homepage
-    path("",index)
-]
+    path("",index),
+    path('post/<slug:slug>',showpost),
+    ]
