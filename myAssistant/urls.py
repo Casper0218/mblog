@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from blog.views import homepage, index_post, showpost, ads_view
 
+
 urlpatterns = [
     path('ads.txt', ads_view),
     path('admin/', admin.site.urls),
