@@ -1,0 +1,89 @@
+<div class="col-lg-3">
+    <!-- Search widget-->
+    <div class="card mb-4">
+        <div class="card-header">Search</div>
+        <div class="card-body">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+            </div>
+        </div>
+    </div>
+    <!-- Side widget-->
+    <div class="card mb-1">
+    <div class="card-header">用戶瀏覽數</div>
+    <div class="card-body text-center">
+        <!-- 將小工具置中 -->
+        <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+            <!-- 嵌入小工具 -->
+            <script id="_wautws">var _wau = _wau || []; _wau.push(["dynamic", "2ywaf4vq1y", "tws", "3fc4d8ffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+        </div>
+    </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">報價條小工具</div>
+        <div class="card-body"></div> 
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://tw.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">追蹤TradingView上的所有市場</span></a></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+              {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "標準普爾500"
+              },
+              {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "US 100"
+              },
+              {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR兌USD"
+              },
+              {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "比特幣"
+              },
+              {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "以太坊"
+              }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "zh_TW"
+          }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+         
+
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">預測買入賣出</div>
+        <div class="card-body"></div> 
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://tw.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">追蹤TradingView上的所有市場</span></a></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+          {
+          "interval": "1m",
+          "width": "300",
+          "isTransparent": false,
+          "height": "400",
+          "symbol": "NASDAQ:MU",
+          "showIntervalTabs": true,
+          "locale": "zh_TW",
+          "colorTheme": "dark"
+          }
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+</div>
+
