@@ -1,5 +1,5 @@
 """
-URL configuration for mblog project.
+URL configuration for myAssistant project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,13 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainsite.views import homepage, showpost,index
+from blog.views import homepage, index_post, showpost, ads_view
 
-#path("",顯示路徑 def ...)),
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    #path("",homepage) 為了套用index這個function 所以先#homepage
-    path("",index),
-    path('post/<slug:slug>',showpost),
-    ]
+    path('ads.txt', ads_view),
+    path('admin/', admin.site.urls),
+    path('', index_post),
+    path('post/<str:slug>', showpost), # 定義視圖與參數名稱
+]
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+import myAssistant.settings
+if myAssistant.settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()

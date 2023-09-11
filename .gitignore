@@ -135,3 +135,10 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# Others
+ads.txt
+
+# Static Files
+static/admin/*
+static/admin
