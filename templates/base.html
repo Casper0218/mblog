@@ -1,0 +1,43 @@
+<!-- base.html -->
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset='utf-8'>
+    {% include 'header.html' %}
+    <title>
+        {% block title %}
+            {{post.title}}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <div class="post_title">
+        <div class='panel panel-default'>
+            <h3>聊齋誌異</h3>
+    </div>
+
+    {% comment %} 側欄 {% endcomment %}
+    <div class='row'>
+        {% include 'menu.html'%}
+
+        {% comment %} 內容主體 {% endcomment %}
+        <div class= 'col-sm-8 col-md-8'>
+            <div class='panel panel-default'>
+                <div class='panel-header'>
+                    {% block headmessage %}{% endblock %}
+                </div>
+        
+                <div class='panel-body'>
+                    {% block content %}{% endblock %}
+                </div>
+    
+                <div class='panel-footer'>
+                    {% include 'footer.html' %}
+                </div>
+            </div>
+        </div>
+        
+        {% comment %} 內容主體-結束 {% endcomment %}
+    </div>
+</body>
+</html>
