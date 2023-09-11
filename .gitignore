@@ -138,3 +138,7 @@ GitHub.sublime-settings
 
 # Others
 ads.txt
+
+# Static Files
+static/admin/*
+static/admin
