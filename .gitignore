@@ -142,3 +142,7 @@ ads.txt
 # Static Files
 static/admin/*
 static/admin
+static/*
+!static/css
+!static/js
+!static/img
