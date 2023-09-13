@@ -35,3 +35,6 @@ def ads_view(request):
     """Replace pub-0000000000000000 with your own publisher ID"""
     content  =  "google.com, pub-7261176306739469, DIRECT, f08c47fec0942fa0"
     return HttpResponse(content, content_type='text/plain')
+
+def apiTestView(request):
+    return render(request, 'pages/apiTest.html', locals())

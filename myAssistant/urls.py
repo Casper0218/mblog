@@ -16,14 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import homepage, index_post, showpost, ads_view
-
+# from blog.views import homepage, index_post, showpost, ads_view
+from api.views import *
+from blog.views import *
 
 urlpatterns = [
     path('ads.txt', ads_view),
     path('admin/', admin.site.urls),
     path('', index_post),
     path('post/<str:slug>', showpost), # 定義視圖與參數名稱
+    path('api/', test),
+    path('api/doc/', apiTestView)
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
