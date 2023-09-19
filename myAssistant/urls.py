@@ -26,7 +26,8 @@ urlpatterns = [
     path('', index_post),
     path('post/<str:slug>', showpost), # 定義視圖與參數名稱
     path('api/', test),
-    path('api/doc/', apiTestView)
+    path('api/doc/', apiTestView),
+    path('sensor/save', sensor_data),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
